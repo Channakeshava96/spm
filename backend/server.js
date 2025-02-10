@@ -3,10 +3,13 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
 const nodemailer = require('nodemailer');
+const cors=require("cors");
 require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+app.use(cors());
 
 // if (!process.env.MONGO_URI || !process.env.GMAIL || !process.env.PASS) {
 //   console.error("Missing required environment variables. Please check your .env file.");
