@@ -1,0 +1,8 @@
+{
+    "rewrites":[
+        {
+            "source":"/submit-form",
+            "destination":"https://spm-backend-1gu7.onrender.com/submit-form"
+        }
+    ]
+}
