@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname))); // Serve static files (CSS, JS, images)
+app.use(express.static(path.join(__dirname,"../frontend"))); // Serve static files (CSS, JS, images)
 
 // MongoDB Connection
 mongoose
@@ -39,7 +39,7 @@ const Contact = mongoose.model(
 
 // Serve the contact.html file
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "contact.html"));
+  res.sendFile(path.join(__dirname, "../frontend/contact.html"));
 });
 
 // API Endpoint for Form Submission
