@@ -2,7 +2,7 @@
     "rewrites":[
         {
             "source":"/submit-form",
-            "destination":"process.env.API"
+            "destination":"https://your-backend-url.com/submit-form"
         }
     ]
 }
