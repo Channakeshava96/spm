@@ -624,11 +624,7 @@ Why Visiting/Survey is necessary?
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
   <!-- End Google Map -->
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=myMap" 
-  async 
-  defer>
-   
-
+  <script>
     document.getElementById("contactForm").addEventListener("submit", async (event) => {
       event.preventDefault();
 
@@ -641,7 +637,8 @@ Why Visiting/Survey is necessary?
       if (!firstName || !lastName || !email || !phoneNumber || !message) {
     alert("Please fill in all the fields.");
     return; // Stop form submission
-    } 
+  }
+
       const response = await fetch("/submit-form", {
         method: "POST",
         headers: {
@@ -655,10 +652,7 @@ Why Visiting/Survey is necessary?
       } else {
         alert("Failed to submit the form. Please try again.");
       }
-   
     });
-
-    
   </script>
   
 </body>
