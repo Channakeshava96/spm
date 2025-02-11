@@ -95,6 +95,11 @@ app.post("/submit-form", async (req, res) => {
   }
 });
 
+app.get('/location', (req, res) => {
+  res.json({ lat: 12.9716, lng: 77.5946 }); // Correct location
+});
+
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
